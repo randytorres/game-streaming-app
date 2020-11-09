@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { AppContainer } from './modules'
+import { AppContainer, navigationRef } from './modules'
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <AppContainer />
     </NavigationContainer>
   );

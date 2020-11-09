@@ -1,24 +1,18 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { ScrollView, Text, ImageBackground } from 'react-native'
 import tailwind from 'tailwind-rn'
 
-import { User } from '../../global'
-import { HomeScreenNavigationProp } from '../types'
-import { Header } from './Header'
-
 interface HomeProps {
-  user: User
-  navigation: HomeScreenNavigationProp;
 }
 
 export const Home: React.FC<HomeProps> = (props) => {
-  const { navigation, user } = props
-
   return (
-    <View style={tailwind('flex-1 bg-white')}>
-      <Header userId={user?.id} navigation={navigation} />
-      <Text>TEST</Text>
-    </View>
+    <ScrollView contentContainerStyle={tailwind('flex-1 bg-white')}>
+      <ImageBackground
+        source={{ uri: 'https://ui8-unity-gaming.herokuapp.com/img/main-pic-1.png' }}
+        style={tailwind('flex-1')}
+      />
+    </ScrollView>
   )
 }
 
