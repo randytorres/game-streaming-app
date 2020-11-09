@@ -1,0 +1,1 @@
+export { getAvatar } from './Avatars'
